@@ -53,7 +53,7 @@ macros/           # Reusable dbt macros
 ### Day 5–6: Storage & SQL
 
 * Design schemas
-* Load data into warehouse (e.g., BigQuery/Postgres)
+* Load data into warehouse 
 
 ### Day 7–8: Transformation (dbt)
 
@@ -67,7 +67,7 @@ macros/           # Reusable dbt macros
 
 ### Day 10: Serving & Documentation
 
-* Connect BI tool (e.g., Metabase)
+* Connect BI tool 
 * Finalize documentation and project showcase
 
 ---
