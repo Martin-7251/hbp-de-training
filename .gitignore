@@ -1,0 +1,40 @@
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+
+venv/
+.env/
+
+# Environment variables / credentials
+
+.env
+*.env
+credentials.json
+secrets.json
+
+# dbt artifacts
+
+target/
+dbt_packages/
+logs/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE
+
+.vscode/
+.idea/
+
+# Data files (optional — keep raw if needed)
+
+# data/raw/*
+
+# data/processed/*
