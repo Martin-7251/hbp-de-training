@@ -38,13 +38,6 @@ macros/           # Reusable dbt macros
 
 ---
 
-## 10-Day Build Plan
-
-### Day 1–2: Foundations
-
-* Set up project structure
-* Understand data lifecycle (ELT vs ETL)
-
 ## Pipeline Architecture
 
 The diagram below represents the end-to-end HBP data lifecycle, covering data ingestion, storage, transformation, and serving.
@@ -58,6 +51,15 @@ This pipeline follows a modern ELT approach:
 * Stored in a centralized warehouse (BigQuery)
 * Transformed using dbt into analytics-ready models
 * Served via BI tools like Metabase for reporting and decision-making
+
+
+## 10-Day Build Plan
+
+### Day 1–2: Foundations
+
+* Set up project structure
+* Understand data lifecycle (ELT vs ETL)
+
 
 ### Day 3–4: Ingestion
 
