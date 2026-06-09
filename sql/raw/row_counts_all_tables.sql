@@ -1,0 +1,6 @@
+-- Row counts across all raw tables
+SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM HBP_PRACTICE.RAW.CUSTOMERS
+UNION ALL
+SELECT 'orders', COUNT(*) FROM HBP_PRACTICE.RAW.ORDERS
+UNION ALL
+SELECT 'products', COUNT(*) FROM HBP_PRACTICE.RAW.PRODUCTS;

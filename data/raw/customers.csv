@@ -1,0 +1,9 @@
+customer_id,first_name,last_name,email,country,created_at,is_active
+1,Alice,Johnson,Alice.J@email.com,gb,2024-01-15,true
+2,Bob,Smith,B.Smith@gmail.com,us,2024-02-20,true
+3,Carol,White,carol.w@email.com,gb,2024-03-10,false
+4,David,Brown,D.Brown@work.com,au,2024-04-05,true
+5,Eva,Davis,Eva.Davis@email.com,us,2024-05-18,true
+6,Frank,Miller,frank.m@gmail.com,ca,2024-06-22,true
+7,Grace,Wilson,Grace.W@email.com,gb,2024-07-30,false
+8,Henry,Moore,H.Moore@work.com,us,2024-08-14,true

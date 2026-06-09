@@ -1,0 +1,7 @@
+product_id,product_name,category,unit_price_pence,in_stock
+P001,Laptop Stand,Accessories,4999,true
+P002,Mechanical Keyboard,Electronics,12999,true
+P003,USB Hub,Electronics,2499,true
+P004,Monitor Arm,Furniture,8999,false
+P005,Webcam,Electronics,6499,true
+P006,Desk Lamp,Accessories,3499,true
