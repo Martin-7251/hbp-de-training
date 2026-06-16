@@ -16,7 +16,7 @@ model-paths: ["../../models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["../../data/processed"]
-macro-paths: ["../../models/macros"]
+macro-paths: ["../../macros"]
 snapshot-paths: ["snapshots"]
 
 # directory as views. These settings can be overridden in the individual model

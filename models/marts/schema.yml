@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: mart_customer_summary
+    description: "Gold layer customer summary table. Combines core customer dimensions with aggregated lifecycle order metrics, preserving all customers regardless of whether they have placed an order."
+    columns:
+      - name: customer_id
+        description: "The unique primary key identifying each customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: "The customer's first name."
+
+      - name: last_name
+        description: "The customer's last name."
+
+      - name: email
+        description: "The customer's primary contact email address."
+        tests:
+          - unique
+          - not_null
+
+      - name: country
+        description: "The country location where the customer profile was registered."
+
+      - name: customer_created_at
+        description: "The timestamp indicating when the customer profile was originally created."
+
+      - name: is_active
+        description: "Boolean flag representing whether the customer account is currently active."
+
+      - name: total_orders_placed
+        description: "The total number of distinct orders placed by this customer. Defaults to 0 for customers with no orders."
+
+      - name: last_order_date
+        description: "The timestamp of the most recent order placed by this customer. Returns null if no orders exist."
+
+      - name: lifetime_spend_pence
+        description: "The cumulative total spend of this customer across all historical orders, tracked in pence. Defaults to 0 for customers with no orders."
+
+      - name: dbt_updated_at
+        description: "The processing timestamp indicating when this row was materialized by dbt."

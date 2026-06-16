@@ -27,4 +27,4 @@ sources:
               column_name: order_id
           - accepted_values:
               column_name: status
-              values: ['pending', 'completed', 'cancelled']
+              values: ['pending', 'completed', 'cancelled', 'refunded']
