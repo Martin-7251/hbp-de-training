@@ -4,7 +4,7 @@ import sys
 
 def run_script(script_name: str) -> None:
     """Run a Python ingestion script and fail fast if it errors."""
-    result = subprocess.run(["python", script_name])
+    result = subprocess.run(["venv/Scripts/python", script_name])
 
     if result.returncode != 0:
         print(f"❌ Pipeline failed at {script_name}")

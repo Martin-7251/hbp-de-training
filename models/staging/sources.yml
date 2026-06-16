@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw
+    database: HBP_RAW
+    schema: INGEST
+    tables:
+      - name: dim_customers
+        tests:
+          - not_null:
+              column_name: customer_id
+          - unique:
+              column_name: customer_id
+
+      - name: dim_products
+        tests:
+          - not_null:
+              column_name: product_id
+          - unique:
+              column_name: product_id
+
+      - name: fct_orders
+        tests:
+          - not_null:
+              column_name: order_id
+          - unique:
+              column_name: order_id
+          - accepted_values:
+              column_name: status
+              values: ['pending', 'completed', 'cancelled']
