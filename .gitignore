@@ -38,3 +38,7 @@ Thumbs.db
 # data/raw/*
 
 # data/processed/*
+
+fivetran_rsa_key.p8
+
+fivetran_rsa_key.pub

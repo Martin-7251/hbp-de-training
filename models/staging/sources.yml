@@ -26,5 +26,24 @@ sources:
           - unique:
               column_name: order_id
           - accepted_values:
-              column_name: status
-              values: ['pending', 'completed', 'cancelled', 'refunded']
+              arguments:
+                column_name: status
+                values: ['pending', 'completed', 'cancelled', 'refunded']
+
+  - name: fivetran_supplier
+    database: HBP_RAW
+    schema: '"google_sheets"'
+    tables:
+      - name: supplier_contacts
+        identifier: '"supplier_contacts"'
+        config:
+          # 💡 Fixed: Forced strict lowercase matching for Snowflake metadata columns
+          loaded_at_field: '"_fivetran_synced"'
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+        tests:
+          - not_null:
+              column_name: '"supplier_id"'
+          - unique:
+              column_name: '"supplier_id"'
