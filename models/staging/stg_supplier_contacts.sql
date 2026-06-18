@@ -19,7 +19,9 @@ cleaned AS (
 
     FROM source
 
-    -- 💡 Fixed: Removed the non-existent Fivetran column filter entirely
+    WHERE _FIVETRAN_DELETED = FALSE
+
+    
 
 )
 
