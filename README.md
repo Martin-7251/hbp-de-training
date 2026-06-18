@@ -40,17 +40,23 @@ macros/           # Reusable dbt macros
 
 ## Pipeline Architecture
 
-The diagram below represents the end-to-end HBP data lifecycle, covering data ingestion, storage, transformation, and serving.
+The diagram below represents the end-to-end HBP v2 data lifecycle, covering multi-channel data ingestion, raw storage schemas, layered dbt transformations, and dual serving options.
 
-📄 View the full architecture diagram:
-[data/raw/hbp_data_lifecycle.pdf](data/raw/hbp_data_lifecycle.pdf)
+![HBP Pipeline v2 Architecture](data/raw/pipeline_v2.png)
 
 This pipeline follows a modern ELT approach:
 
-* Data is ingested from source systems using Airbyte
-* Stored in a centralized warehouse (BigQuery)
-* Transformed using dbt into analytics-ready models
-* Served via BI tools like Metabase for reporting and decision-making
+* **Data Ingestion & Raw Storage**: Data is ingested via two distinct paths:
+  * Custom API/Batch pipelines using **Python** landing in the `HBP_RAW.INGEST` schema.
+  * Automated third-party ingestion via **Fivetran** landing in the `HBP_RAW.FIVETRAN_SUPPLIER` schema.
+* **Layered dbt Transformation**: Raw data is incrementally cleaned and modeled through four distinct dbt layers:
+  * **Staging**: Light cleaning, type casting, and standardizing.
+  * **Intermediate**: Ephemeral or materialized joins and basic business logic.
+  * **Marts**: Dimension and fact tables optimized for performance.
+  * **Operational/Reporting**: Aggregated tables structured for end-user tools.
+* **Dual Serving Options**: Transformed data is served to two primary targets:
+  * **BI Tools** (e.g., Metabase/Looker) for analytical reporting and decision-making.
+  * **Operational Data Consumers** (via Reverse ETL or APIs) to power business workflows.
 
 
 ## 10-Day Build Plan
