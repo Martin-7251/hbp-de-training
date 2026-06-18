@@ -30,6 +30,10 @@ sources:
                 column_name: status
                 values: ['pending', 'completed', 'cancelled', 'refunded']
 
+      # Added correctly under the 'raw' source tables list with exact matching indentation
+      - name: support_tickets
+        description: "Raw customer support ticket submissions and resolution timelines."
+
   - name: fivetran_supplier
     database: HBP_RAW
     schema: '"google_sheets"'

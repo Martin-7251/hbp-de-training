@@ -42,3 +42,22 @@ models:
 
       - name: dbt_updated_at
         description: "The processing timestamp indicating when this row was materialized by dbt."
+
+  - name: mart_support_summary
+    description: "Commercial summary mart combining order financial aggregates with customer support ticket operational burden metrics and risk health classifications."
+    columns:
+      - name: customer_id
+        description: "The primary unique key identifying each distinct portfolio customer."
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+      - name: customer_health
+        description: "Strategic business segmentation tracking retention risk based on total spend and outstanding friction ('At Risk', 'Needs Attention', 'Healthy')."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['At Risk', 'Needs Attention', 'Healthy']
