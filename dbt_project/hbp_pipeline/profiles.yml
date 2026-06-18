@@ -1,0 +1,13 @@
+hbp_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: LQJMGEU-UI18186
+      user: FIVETRAN_USER
+      private_key_path: "C:/Users/user/Documents/Tana/hbp-de-training/fivetran_rsa_key.p8" # 👈 Fixed property name and used forward slashes
+      role: FIVETRAN_ROLE
+      warehouse: FIVETRAN_WH
+      database: HBP_RAW
+      schema: GOOGLE_SHEETS
+      threads: 1
