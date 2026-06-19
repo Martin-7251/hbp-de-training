@@ -111,7 +111,7 @@ To build a scalable, maintainable, and production-ready data pipeline that demon
 ##Data Quality Issues
 # 1. What Data Quality Issues I Identified
 
-## Issue 1: Missing `resolved_at` Values
+## Issue 2: Missing `resolved_at` Values/Non Validated
 
 ### Why It Matters
 
