@@ -122,3 +122,4 @@ Open tickets have not yet been resolved, so there is no resolution date.
 - Allow NULL values in `resolved_at`.
 - Do not fail validation.
 - Set `days_to_resolve` to NULL for unresolved tickets.
+
