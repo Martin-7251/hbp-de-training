@@ -106,3 +106,19 @@ This pipeline follows a modern ELT approach:
 ## Goal
 
 To build a scalable, maintainable, and production-ready data pipeline that demonstrates real-world data engineering skills.
+
+
+##Data Quality Issues
+# 1. What Data Quality Issues I Identified
+
+## Issue 1: Missing `resolved_at` Values
+
+### Why It Matters
+
+Open tickets have not yet been resolved, so there is no resolution date.
+
+### How to Handle It
+
+- Allow NULL values in `resolved_at`.
+- Do not fail validation.
+- Set `days_to_resolve` to NULL for unresolved tickets.
